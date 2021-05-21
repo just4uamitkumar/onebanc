@@ -1,0 +1,47 @@
+/*----| Color |------*/
+$bodyBG: #f1f1f1;
+$footerBG: #222;
+$textColor: #333;
+$ftText: #eceff1;
+$navBG: #ee6e73;
+$Chat: #f6f3a7;
+$lightBG: #d8e6ff;
+$sideBG: #f3dfdf;
+$border: #ff9a9a;
+$card1: #57beef;
+$card2: #1ea505;
+$card3: #fffeb2;
+$card4: #c72205;
+$card1A: #94ddff;
+$card2A: #d7ffd0;
+$card3A: #fffed4;
+$card4A: #fda292;
+
+/*----| BreakPoints |------*/
+$breakpoint-desktop: 1366px;
+
+/*----| Global |------*/
+.text-center {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
+}
+
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+
+/*----| button |------*/
+.btn {
+  border: 0;
+  padding: 0.4rem 0.7rem;
+  border-radius: 4px;
+}
+.btn-danger {
+  background-color: $card4;
+  color: $ftText;
+}

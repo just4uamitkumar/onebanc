@@ -1,0 +1,50 @@
+@media (max-width: $breakpoint-desktop) {
+  html {
+    font-size: "12px";
+  }
+
+  /* Header */
+  header {
+    padding: 0.3rem;
+    .logo {
+      width: 150px;
+    }
+  }
+
+  /* Footer */
+  footer {
+    padding: 0.4rem 1rem 0.8rem;
+  }
+
+  .sidebar {
+    left: 0;
+    top: 61px;
+    bottom: 41px;
+    padding: 0.5rem 0;
+    ul li {
+      padding: 0.4rem 1rem;
+    }
+  }
+
+  .content {
+    & > .right {
+      height: calc(100vh - 102px);
+      .mobile {
+        border-width: 15px;
+        min-width: 420px;
+      }
+    }
+  }
+
+  .detail {
+    .header {
+      padding: 0.4rem;
+    }
+    .detailBody {
+      height: 426px;
+      p {
+        font-size: 2.5rem;
+      }
+    }
+  }
+}
