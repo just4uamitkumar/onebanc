@@ -1,0 +1,217 @@
+@import "variable";
+
+/* Global */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* HTML, Body */
+body {
+  background: $bodyBG;
+}
+html {
+  font-family: "Courier New", Courier, monospace;
+  font-size: "14px";
+  line-height: 1.4;
+  color: $textColor;
+}
+
+/* Header */
+header {
+  background-color: $navBG;
+  padding: 0.5rem;
+  .logo {
+    width: 180px;
+    margin: 0 auto;
+    a {
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+/* Footer */
+footer {
+  background-color: #222;
+  padding: 0.5rem 1rem 1rem;
+  p {
+    color: $ftText;
+  }
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 76px;
+  bottom: 46px;
+  width: 250px;
+  background: $sideBG;
+  padding: 1rem 0;
+
+  ul {
+    li {
+      padding: 0.5rem 1rem;
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid $border;
+      cursor: pointer;
+      &:hover {
+        background-color: $ftText;
+      }
+      .userIcon {
+        border-radius: 50%;
+        display: inline-block;
+        width: 18px;
+        height: 18px;
+        background: $textColor;
+        padding: 1%;
+        text-align: center;
+        overflow: hidden;
+        color: $ftText;
+      }
+      .userName {
+        font-size: 0.9rem;
+        color: $textColor;
+        margin-left: 0.5rem;
+      }
+    }
+  }
+}
+
+/* Content Right */
+.content {
+  overflow:hidden;
+  position: relative;
+ & > .right {
+    width: calc(100% - 250px);
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 122px);
+
+    .mobile {     
+      border: 20px ridge $footerBG;
+      width: 27%;
+      min-width: 460px;
+    }
+  }
+}
+
+/*detail*/
+.detail {
+  .header {
+    background: $navBG;
+    padding: 0.5rem;
+    h4 {
+      font-size: 1.2rem;
+      color: $lightBG;
+    }
+  }
+  .detailBody {
+    padding: 0.5rem;
+    height: 625px;
+    overflow-y: auto;
+    background-color: $sideBG;
+    p {
+      font-size: 3rem;
+      text-align: center;
+    }
+
+    ul {
+      li{
+        margin: 0 0 25px;
+        overflow:hidden;        
+
+        .startDate{
+          display: block;
+          position: relative;
+          text-align: center;
+          margin: 0 0 7px;
+          span{
+            background-color:$sideBG;
+            position: relative;
+            z-index: 2;
+            padding: 5px;
+          }
+          &:after{
+            content: '';
+            position: absolute;
+            border:1px dashed $textColor;
+            width: 100%;
+            left: 0;
+            top: 50%;
+          }         
+        }
+
+        & > .left{float: left; width: 82%;
+                   
+        }
+        & > .right{float: right;width: 82%;
+          
+        }
+
+        .payBlock{
+          &[data-bg='green']{background-color: $card2;}
+          &[data-bg='blue']{background-color: $card1;}
+          &[data-bg='yellow']{background-color: $card3;}
+          &[data-bg='red']{background-color: $card4;}
+
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 0.5rem;
+          box-shadow: 0 3px 2px #b3b0b0;
+          .val{
+            font-weight: 700;
+            font-size: 2rem;
+            .symbol{font-size: 1.5rem;}
+          }
+
+          .trans{
+            span{display: block;}
+            button{
+              display: block;
+              cursor: pointer;
+            }
+          }
+
+          .right{
+            display: flex;
+            align-items: center;
+            .payStatus{
+              font-size: 0.9rem;
+              font-weight: 700;
+            }
+            button{
+              background: none;
+              border:0;
+              font-size: 1rem;
+              padding: 0.5rem;
+              cursor: pointer;
+            }
+          }        
+
+        }
+
+        .userDetail{
+          background-color: #fff;
+          padding: 0.5rem;
+          font-size: 0.8rem;
+        }
+
+        .payBlock[data-bg='green'] + .userDetail{background-color: $card2A;}
+        .payBlock[data-bg='blue'] + .userDetail{background-color: $card1A;}
+        .payBlock[data-bg='yellow'] + .userDetail{background-color: $card3A;}
+        .payBlock[data-bg='red'] + .userDetail{background-color: $card4A;}
+      }
+    }
+  }
+}
+
+
+
+@import 'Responsive'
